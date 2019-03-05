@@ -43,3 +43,47 @@ const addressBook = {
         city: 'Atlanta',
     },
 };
+
+//write a function that prints the contact info for each entry
+
+
+
+function prettyPrintAddressBook(book) {
+    const allTheKeys = Object.keys(book); //returns an array of strings
+    allTheKeys.forEach(function (stringKey) {
+        let entry = book[stringKey];
+        console.log(stringKey);
+        console.log(entry);
+    });
+}
+
+prettyPrintAddressBook(addressBook);
+
+function prettyPrintEntryItemInAddressBook(book, item) {
+    const allTheKeys = Object.keys(book); //returns an array of strings
+    allTheKeys.forEach(function (stringKey) {
+        let entry = book[stringKey][item];
+        console.log(stringKey);
+        console.log(entry);
+    });
+}
+
+prettyPrintAddressBook(addressBook);
+
+prettyPrintEntryItemInAddressBook(addressBook, "city");
+
+// function printInfo(addressBook) {
+//     //addressBook.forEach(console.log(Object.keys));
+//     let info = {};
+//     for (let i = 0; i < addressBook.length; i++) {
+
+    //}
+    // console.log(Object.keys(addressBook));
+    // console.log(Object.keys(addressBook.DigitalCrafts));
+    // console.log(Object.keys(addressBook.DigitalCrafts.address));
+
+//}
+
+// printInfo(addressBook);
+
+// write a function that accepts address book and a key name and prints only that info
